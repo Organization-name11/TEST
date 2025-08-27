@@ -1,1 +1,19 @@
-
+{
+  "name": "SmartBuilding DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "forwardPorts": [5000],
+  "postCreateCommand": "pip install -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
